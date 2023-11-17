@@ -25,3 +25,4 @@ def two_list_dictionary(keys, values):
     # [(keys[i], values[i]) if len(values > i) else (keys[i], None) for i in range(len(keys))]
     
     # solution uses the Enumerate constructor to make (index, key) tuples and go from there
+    # but I feel dictionary comprehension is equally pythonic
