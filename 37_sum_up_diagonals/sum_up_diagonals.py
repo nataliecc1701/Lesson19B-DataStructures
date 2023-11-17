@@ -27,3 +27,4 @@ def sum_up_diagonals(matrix):
         d2.append(matrix[-1-i][i])
     
     return sum(d1) + sum(d2)
+    # soln uses an integer total to track it rather than building the diagonals into lists
