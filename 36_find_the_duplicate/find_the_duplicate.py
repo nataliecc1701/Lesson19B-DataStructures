@@ -36,3 +36,5 @@ def find_the_duplicate(nums):
         if nums.count(num) == 2:
             return num
     return None
+
+    # even better to use a set of things we've seen so far (this runs in O(N^2))
