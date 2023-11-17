@@ -40,3 +40,24 @@ def list_manipulation(lst, command, location, value=None):
         >>> list_manipulation(lst, 'add', 'dunno') is None
         True
     """
+    
+    # I hate this function already
+    # it tries to do too much on a single function
+    # but anyway! I have to write it
+    if location == "beginning":
+        loc = 0
+    elif location == "end":
+        loc = -1
+    else:
+        return None
+    
+    if command == "remove":
+        return lst.pop(loc)
+    elif command == "add":
+        if loc != -1:
+            lst.insert(loc, value)
+        else:
+            lst.append(value)
+        return lst
+    else:
+        return None
