@@ -20,3 +20,5 @@ def min_max_keys(d):
             max = key
     
     return(min, max)
+    
+    # better to use built in min and max functions
