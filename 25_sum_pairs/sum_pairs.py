@@ -26,3 +26,6 @@ def sum_pairs(nums, goal):
             if num + nums[idx] == goal:
                 return (num, nums[idx])
     return ()
+    
+    # note: check solution for a more python-idomatic way of doing this
+    # that also gets rid of the nested forloops
