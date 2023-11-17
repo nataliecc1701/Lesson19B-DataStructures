@@ -11,3 +11,10 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    
+    tracker = (None, 0) # key-value pair, if we were condensing this into a count dictionary
+    for num in set(nums):
+        if nums.count(num) > tracker[1]:
+            tracker = (num, nums.count(num))
+    
+    return tracker[0]
