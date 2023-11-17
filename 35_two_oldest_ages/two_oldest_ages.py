@@ -13,11 +13,13 @@ def two_oldest_ages(ages):
         >>> two_oldest_ages([1, 5, 5, 2])
         (2, 5)
     """
-
+    
     # NOTE: don't worry about an optimized runtime here; it's fine if
     # you have a runtime worse than O(n)
-
+    
     # NOTE: you can sort lists with lst.sort(), which works in place (mutates);
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+    
+    return tuple(sorted(set(ages), reverse=True))[1::-1]
