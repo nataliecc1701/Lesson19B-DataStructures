@@ -15,3 +15,11 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    vals = values.copy()
+    while len(vals) < len(keys):
+        vals.append(None)
+    return {keys[i]:vals[i] for i in range(len(keys))}
+    
+    # tried another approach creating a list of tuples first
+    # then decided to try dict comprehension before finishing.
+    # [(keys[i], values[i]) if len(values > i) else (keys[i], None) for i in range(len(keys))]
