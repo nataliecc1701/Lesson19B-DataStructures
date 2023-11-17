@@ -12,3 +12,5 @@ def titleize(phrase):
         output += word.capitalize() + " "
     
     return output.strip()
+    
+    # or, apparently, I could have done this with a built-in method.
