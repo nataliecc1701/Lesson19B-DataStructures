@@ -21,3 +21,12 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    
+    prepped_phrase = ""
+    
+    # remove non-alphanumeric characters such as spaces and apostrophes
+    for char in phrase:
+        if char.isalpha():
+            prepped_phrase += char.lower()
+    
+    return prepped_phrase == prepped_phrase[::-1]
